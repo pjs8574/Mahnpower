@@ -2,9 +2,11 @@ package com.shawric.Mahnpower;
 
 import java.util.List;
 
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.stats.StatList;
 import net.minecraft.world.World;
 
 public class Mahnkenism extends Item{
@@ -44,20 +46,25 @@ public class Mahnkenism extends Item{
 	{
 	par3List.add("Tier: " + this.itemTier);
 	par3List.add("Type: " + this.itemType);
+	par3List.add("Winds: " + (par1ItemStack.getMaxDamage() - par1ItemStack.getItemDamage()));
 	}
 	
+	
 	@Override
-	 public ItemStack onItemRightClick(ItemStack itemStk, World world1, EntityPlayer triggerPlayer)
-	    {
+	public void onCreated(ItemStack itemStk, World world1, EntityPlayer creatingPlayer) 
+	{
+		itemStk.damageItem((this.maxWinds), creatingPlayer);	
+	}
+	
+	
+	
+	@Override
+	public boolean onEntitySwing(EntityLivingBase entityLiving, ItemStack itemStk)
+    	{
 
-		
-		
-		
-		
-	  	//
-		itemStk.damageItem(1, triggerPlayer);
+		itemStk.setItemDamage((itemStk.getItemDamage() - 1));
 	  	
-	  	return itemStk;
+	  	return false;
 	    }
 	
 	
