@@ -15,7 +15,9 @@ Overall, Mahnpower is a clockwork themed tech mod with the intention to keep thi
 Tools that amplify your yield from ores instead of machinery.  Sorta stealing the hammer> ore gravel > ore sand > ore dust idea from Ex Nihlio
 
 Prospecting chisel > use on ore, get ore shards
+
 Prospecting hammer > use on ore shards, get ore chunks
+
 Prospecting pick > use on ore chunks, get ore nuggets
 
 
@@ -33,15 +35,22 @@ In the Machines, they serve as power source and upgrades.
 Baisc Mahnkenisms
 
 Tier 1
+
 Wood - precise
 Stone - Tough
+
 Tier 2
+
 Iron - Tough
 Gold - Precise
+
 Tier 3
+
 Diamond - precise
 Obsidian - Tough
+
 Tier 4
+
 Nether - tough
 End - Precise
 
