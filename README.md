@@ -30,6 +30,8 @@ Each Tier has 2 varients. Precise and Tough.  Precision MKs are faster but store
 
 In the Machines, they serve as power source and upgrades.
 
+Baisc Mahnkenisms
+
 Tier 1
 Wood - precise
 Stone - Tough
@@ -42,6 +44,12 @@ Obsidian - Tough
 Tier 4
 Nether - tough
 End - Precise
+
+Advanced Mahnkenisms
+
+Advanced MKs are a combination of Basic MKs. They are built on Clockwork Bench.
+
+Depending on what basic Mahnkenisms are used, the resulting advanced MK's stats are differnt.  Each Advanced MK has a Precision and Toughness rating.  These are combined from the basic MKs that make up the Advaned one.  So, four Wooden MKS make a single advanced MK with a precision of 8 and toughness of 4. (Toughness rating of 1 and Precsion rating of 2 for each wooden mahnkenism)
 
 
 Machines -- Furnace, Ore processor(place hammer/chisel/prospector pick in it and it uses it on the ore), Charging gear box (place a bunch of MKs in it and it will charge them all by punching the thing)
