@@ -1,6 +1,7 @@
 package com.shawric.Mahnpower;
 
 
+import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -29,6 +30,9 @@ public class Mahnpower {
 	
 	public static Item woodenMahnkenism;
 	
+	public static Block blockAlabastertOvenIdle;
+	public static Block blockAlabastertOvenActive;
+	
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
@@ -42,6 +46,13 @@ public class Mahnpower {
 		GameRegistry.registerItem(woodenMahnkenism, modid + (woodenMahnkenism.getUnlocalizedName().substring(5)));
 		
 		
+		//Machines
+		
+		blockAlabastertOvenIdle = new AlabasterOven(false).setBlockName("AlabasterOvenIdle").setCreativeTab(tabMyMod);
+		blockAlabastertOvenActive = new AlabasterOven(true).setBlockName("AlabasterOvenActive").setLightLevel(0.625F);
+		
+		GameRegistry.registerBlock(blockAlabastertOvenIdle, modid + (blockAlabastertOvenIdle.getUnlocalizedName().substring(5)));
+		GameRegistry.registerBlock(blockAlabastertOvenActive, modid + (blockAlabastertOvenActive.getUnlocalizedName().substring(5)));
 	}
 	
 	@EventHandler

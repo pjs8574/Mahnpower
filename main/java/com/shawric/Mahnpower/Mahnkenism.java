@@ -18,7 +18,7 @@ public class Mahnkenism extends Item{
 	public Mahnkenism(String name, int tier, String itemTypePar) {
 		
 		this.setUnlocalizedName(name); //Sets the name of this item, Has to be unique!
-		this.setCreativeTab(Mahnpower.tabMyMod);; //This Item will be in the Combat Creative Tab!
+		this.setCreativeTab(Mahnpower.tabMyMod); //This Item will be in the Creative Tab!
 		this.setTextureName(Mahnpower.modid + ":" + this.getUnlocalizedName().substring(5)); //The texture for this item is the Grenade!
 
 		this.setMaxStackSize(1);
