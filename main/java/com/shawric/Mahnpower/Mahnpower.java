@@ -9,9 +9,11 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod(modid = "shawric_mahnpower", name = "Mahnpower Mod", version = "0.0.1 MC_1.7.10")
@@ -23,15 +25,21 @@ public class Mahnpower {
 	public static Common proxy;
 	
 	int entIDCount = 100;
-	
+
 	public static final String modid = "shawric_mahnpower";
 	public static CreativeTabs tabMyMod = new MahnpowerCreativeTab("tabMahnpower");
+	
+	
+	@Instance(modid)
+	public static Mahnpower instance;
 	
 	
 	public static Item woodenMahnkenism;
 	
 	public static Block blockAlabastertOvenIdle;
 	public static Block blockAlabastertOvenActive;
+	public static final int guiIDAlabasterOven = 0;
+	
 	
 	
 	@EventHandler
@@ -71,6 +79,8 @@ public class Mahnpower {
 		
 		
 		
+		GameRegistry.registerTileEntity(TileEntityAlabasterOven.class, "AlabasterOven");
+		NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
 	}
 	
 	
